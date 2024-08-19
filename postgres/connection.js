@@ -2,7 +2,6 @@ const { Client } = require('pg');
 
 // Configuration object
 const client = new Client({
-  user: process.env.PGHOST,
   host: process.env.PGHOST,
   user: process.env.PGUSER, // e.g., 'localhost'
   database: process.env.PGDATABASE,

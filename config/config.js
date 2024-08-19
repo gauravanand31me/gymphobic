@@ -1,9 +1,9 @@
-{
+const config = {
   "development": {
-    "username": "postgres",
-    "password": "Sourav@1992",
-    "database": "postgres",
-    "host": "127.0.0.1",
+    "username": process.env.PGUSER,
+    "password": process.env.PGPASSWORD,
+    "database": process.env.PGDATABASE,
+    "host": process.env.PGHOST,
     "dialect": "postgres"
   },
   "test": {
@@ -21,3 +21,5 @@
     "dialect": "mysql"
   }
 }
+
+module.exports = config;
